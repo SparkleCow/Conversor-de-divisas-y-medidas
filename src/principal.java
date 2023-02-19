@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 import javax.swing.*;
 public class principal {
 	public static void main(String[] args) {	
@@ -59,52 +61,52 @@ public class principal {
 
 								switch(opcionMoneda) {
 									case "Convertir de COP a USD": {
-										resultado = convertidor.convertidorCOPaUSD(moneda); 
+										resultado = Math.round(convertidor.convertidorCOPaUSD(moneda)*100)/100d; 
 										ejecucion=JOptionPane.showOptionDialog(null, "El total del valor ingresado convertido a dolares es de: \n$"+resultado+" USD",
 												"Resultado", 0, JOptionPane.INFORMATION_MESSAGE, null, opcionesFinales, null);
 										break;
 									}case "Convertir de COP a EUR" : {
-										resultado = convertidor.convertidorCOPaEUR(moneda); 
+										resultado = Math.round(convertidor.convertidorCOPaEUR(moneda)*100)/100d; 
 										ejecucion=JOptionPane.showOptionDialog(null, "El total del valor ingresado convertido a euros es de: \n$"+resultado+" EUR",
 												"Resultado", 0, JOptionPane.INFORMATION_MESSAGE, null, opcionesFinales, null);
 										break;
 									}case "Convertir de COP a GBP" : {
-										resultado = convertidor.convertidorCOPaGBP(moneda); 
+										resultado = Math.round(convertidor.convertidorCOPaGBP(moneda)*100)/100d; 
 										ejecucion=JOptionPane.showOptionDialog(null, "El total del valor ingresado convertido a libras esterlinas es de: \n$"+resultado+" GBP",
 												"Resultado", 0, JOptionPane.INFORMATION_MESSAGE, null, opcionesFinales, null);
 										break;
 									}case "Convertir de COP a JPY" : {
-										resultado = convertidor.convertidorCOPaJPY(moneda); 
+										resultado = Math.round(convertidor.convertidorCOPaJPY(moneda)*100)/100d; 
 										ejecucion=JOptionPane.showOptionDialog(null, "El total del valor ingresado convertido a yenes es de: \n$"+resultado+" JPY",
 												"Resultado", 0, JOptionPane.INFORMATION_MESSAGE, null, opcionesFinales, null);
 										break;
 									}case "Convertir de COP a KRW" : {
-										resultado = convertidor.convertidorCOPaKRW(moneda); 
+										resultado = Math.round(convertidor.convertidorCOPaKRW(moneda)*100)/100d; 
 										ejecucion=JOptionPane.showOptionDialog(null, "El total del valor ingresado convertido a won Sul es de: \n$"+resultado+" KRW",
 												"Resultado", 0, JOptionPane.INFORMATION_MESSAGE, null, opcionesFinales, null);
 										break;
 									}case "Convertir de USD a COP" : {
+										resultado = Math.round(convertidor.convertidorUSDaCop(moneda)*100)/100d; 
 										ejecucion=JOptionPane.showOptionDialog(null, "El total del valor ingresado convertido a pesos colombianos es de: \n$"+resultado+" COP",
 												"Resultado", 0, JOptionPane.INFORMATION_MESSAGE, null, opcionesFinales, null);
-										resultado = convertidor.convertidorUSDaCop(moneda); 
 										break;
 									}case "Convertir de EUR a COP" : {
-										resultado = convertidor.convertidorEURaCOP(moneda); 
+										resultado = Math.round(convertidor.convertidorEURaCOP(moneda)*100)/100d; 
 										ejecucion=JOptionPane.showOptionDialog(null, "El total del valor ingresado convertido a pesos colombianos es de: \n$"+resultado+" COP",
 												"Resultado", 0, JOptionPane.INFORMATION_MESSAGE, null, opcionesFinales, null);
 										break;
 									}case "Convertir de GBP a COP" : {
-										resultado = convertidor.convertidorGBPaCOP(moneda); 
+										resultado = Math.round(convertidor.convertidorGBPaCOP(moneda)*100)/100d; 
 										ejecucion=JOptionPane.showOptionDialog(null, "El total del valor ingresado convertido a pesos colombianos es de: \n$"+resultado+" COP",
 												"Resultado", 0, JOptionPane.INFORMATION_MESSAGE, null, opcionesFinales, null);
 										break;
 									}case "Convertir de JPY a COP" : {
-										resultado = convertidor.convertidorJPYaCop(moneda); 
+										resultado = Math.round(convertidor.convertidorJPYaCop(moneda)*100)/100d; 
 										ejecucion=JOptionPane.showOptionDialog(null, "El total del valor ingresado convertido a pesos colombianos es de: \n$"+resultado+" COP",
 												"Resultado", 0, JOptionPane.INFORMATION_MESSAGE, null, opcionesFinales, null);
 										break;
 									}case "Convertir de KRW a COP" :{
-										resultado = convertidor.convertidorKRWaCOP(moneda); 
+										resultado = Math.round(convertidor.convertidorKRWaCOP(moneda)*100)/100d; 
 										ejecucion=JOptionPane.showOptionDialog(null, "El total del valor ingresado convertido a pesos colombianos es de: \n$"+resultado+" COP",
 												"Resultado", 0, JOptionPane.INFORMATION_MESSAGE, null, opcionesFinales, null);
 										break;
@@ -116,6 +118,7 @@ public class principal {
 							}catch(NullPointerException e) {
 								break;
 							}
+							break;
 						}case "Conversor de medidas":{
 							convertidorMedidas medidas = new convertidorMedidas();
 							String opcionMedida = (String)JOptionPane.showInputDialog(null, "¿Que conversion deseas ejecutar?. ", "Menu", JOptionPane.QUESTION_MESSAGE, null, arrayMedidas, "Convertir de KM a M");
@@ -188,6 +191,7 @@ public class principal {
 							}catch(NullPointerException e) {
 								break;
 							}
+							break;
 						}
 					}
 				}catch(NullPointerException e) {		
