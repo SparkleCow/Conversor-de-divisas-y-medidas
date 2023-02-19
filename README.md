@@ -7,7 +7,7 @@
 
 #### Descripción
 
-El codigo en cuestión permite ingresar datos numeros para posteriormente realizar la conversion al tipo de dato que el usuario requiera. El codigo cuenta con dos funcionalidades, la primera, siendo el conversor de monedas (De COP a diversas monedas como USD, JPY, KRW, etc y viceversa) y la segunda, conversor de medidas teniendo como unidad de medida centrar al metro.
+El codigo en cuestión permite ingresar datos numeros para posteriormente realizar la conversion al tipo de dato que el usuario requiera. El codigo cuenta con dos funcionalidades, la primera, siendo el conversor de monedas (De COP a diversas monedas como USD, JPY, KRW, etc y viceversa) y la segunda, conversor de medidas teniendo como unidad de medida central al metro.
 
 #### Caracteristicas
 ##### Conversion de monedas
@@ -21,7 +21,6 @@ El codigo en cuestión permite ingresar datos numeros para posteriormente realiz
 	Conversión de JPY a COP
 	Conversión de GBP a COP
 	Conversión de KRW a COP
-
 ##### Conversion de medidas
 	Conversión de KM a M
 	Conversión de HM a M
